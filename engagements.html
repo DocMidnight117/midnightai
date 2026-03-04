@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MAI technical case studies covering sovereign, hardened, and agentic implementations across regulated Australian sectors."
+    />
+    <meta property="og:title" content="MAI | Technical Case Studies" />
+    <meta
+      property="og:description"
+      content="Technical case studies across sovereign infrastructure, governance architecture, and adversarial AI security delivery."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="logo.png" />
+    <title>MAI | Technical Case Studies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="font-body text-body leading-5">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header id="top" class="sticky top-0 z-20 border-b border-neutral-700 bg-neutral-950/75 backdrop-blur-md">
+      <div class="container flex min-h-16 items-center justify-between gap-3 py-2">
+        <a href="index.html#top" class="inline-flex items-center gap-2 text-heading-2 font-bold text-neutral-50 no-underline" aria-label="MAI home">
+          <img
+            src="logo.png"
+            alt="MAI logo"
+            width="32"
+            height="32"
+            class="h-8 w-8 object-contain"
+          />
+          <span>MAI</span>
+        </a>
+        <button
+          data-menu-toggle
+          class="inline-flex border border-neutral-700 px-3 py-2 font-mono text-caption text-neutral-50 md:hidden"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          Menu
+        </button>
+        <nav
+          id="main-nav"
+          data-main-nav
+          class="absolute right-4 top-[calc(100%+0.5rem)] hidden min-w-[220px] flex-col gap-2 border border-neutral-700 bg-neutral-900 p-3 md:static md:flex md:min-w-0 md:flex-row md:items-center md:gap-5 md:border-0 md:bg-transparent md:p-0"
+          aria-label="Main navigation"
+        >
+          <a class="top-link" href="index.html#services-intro">Services</a>
+          <a class="top-link" href="index.html#build">Build</a>
+          <a class="top-link" href="index.html#govern">Govern</a>
+          <a class="top-link" href="index.html#secure">Secure</a>
+          <a class="top-link" href="index.html#educate">Educate</a>
+          <a class="top-link" href="#engagements">Engagements</a>
+          <a class="top-link" href="index.html#local-edge">Local Edge</a>
+          <button
+            type="button"
+            data-socials-open
+            class="inline-flex items-center justify-center border border-neutral-700 px-3 py-2 font-mono text-caption text-neutral-100 hover:bg-neutral-800"
+            aria-haspopup="dialog"
+            aria-controls="socials-modal"
+            aria-expanded="false"
+          >
+            Socials
+          </button>
+          <a href="index.html#contact" class="btn-primary px-3 py-2 text-caption-bold">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero-monitor relative overflow-hidden border-b border-neutral-700 pb-16 pt-20 md:pb-24 md:pt-28">
+        <div class="container relative z-10">
+          <p class="mb-3 font-mono text-caption text-brand-400">CASE FILE // TECHNICAL DELIVERY</p>
+          <h1 class="mb-4 max-w-4xl text-[28px] leading-[34px] text-neutral-50 md:text-[52px] md:leading-[58px]">
+            Selected Engagements
+          </h1>
+          <p class="max-w-3xl text-[15px] leading-7 text-neutral-300 md:text-[16px]">
+            Modular case studies documenting sovereign architecture, hardened controls, and agentic system
+            optimisation in Australian regulated environments.
+          </p>
+        </div>
+      </section>
+
+      <section id="engagements" class="scroll-mt-24 border-y border-neutral-700 bg-neutral-900/70 py-16 md:py-24">
+        <div class="container">
+          <div class="status-chip-row">
+            <span class="status-chip live">Selected Engagements</span>
+          </div>
+          <h2 class="service-title mb-4 text-heading-2 text-neutral-50">Technical Case Studies</h2>
+          <p class="mb-10 max-w-4xl text-body text-neutral-300 md:mb-12">
+            Sovereign, hardened, and agentic delivery with measurable outcomes. Each engagement documents specialised
+            build choices, optimisation targets, and approval ready governance controls.
+          </p>
+
+          <div class="space-y-5 md:space-y-6">
+            <article class="panel overflow-hidden p-0">
+              <div class="grid md:grid-cols-[280px_1fr]">
+                <aside class="border-b border-neutral-700 bg-neutral-950/80 p-5 font-mono text-caption text-neutral-300 md:border-b-0 md:border-r">
+                  <p class="text-brand-400">ENGAGEMENT 01</p>
+                  <p class="mt-2 text-caption-bold text-neutral-100">The Sovereign Intelligence Layer</p>
+                  <p class="mt-4 text-neutral-400">Market</p>
+                  <p>Critical Infrastructure and Government</p>
+                  <p class="mt-4 text-neutral-400">Tech Specs</p>
+                  <ul class="mt-1 space-y-1 text-neutral-200">
+                    <li>Llama 3.3 70B (air gapped)</li>
+                    <li>vLLM inference engine</li>
+                    <li>Milvus/Qdrant on local NVMe</li>
+                    <li>Haystack RAG orchestration</li>
+                  </ul>
+                  <p class="mt-4 text-neutral-400">Compliance</p>
+                  <p>SOCI Act 2018, ASD ISM controls</p>
+                </aside>
+                <div class="p-5 md:p-6">
+                  <h3 class="text-heading-3 text-neutral-50">Challenge</h3>
+                  <p class="mt-2 text-body text-neutral-300">
+                    High security environment requiring AI utility without data leakage risk to US based LLM providers.
+                  </p>
+                  <h3 class="mt-5 text-heading-3 text-neutral-50">Solution</h3>
+                  <p class="mt-2 text-body text-neutral-300">
+                    Implemented an on premises, sovereign intelligence stack with local retrieval and no external data
+                    transit. Architecture was hardened for isolation and operational continuity.
+                  </p>
+                  <h3 class="mt-5 text-heading-3 text-neutral-50">Impact</h3>
+                  <p class="mt-2 text-body text-neutral-300">
+                    0% external API calls and a 70% reduction in manual documentation look-up time.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel overflow-hidden p-0">
+              <div class="grid md:grid-cols-[280px_1fr]">
+                <aside class="border-b border-neutral-700 bg-neutral-950/80 p-5 font-mono text-caption text-neutral-300 md:border-b-0 md:border-r">
+                  <p class="text-brand-400">ENGAGEMENT 02</p>
+                  <p class="mt-2 text-caption-bold text-neutral-100">Autonomous GRC Sentinel</p>
+                  <p class="mt-4 text-neutral-400">Market</p>
+                  <p>Tier 1 Financial Services and Fintech</p>
+                  <p class="mt-4 text-neutral-400">Tech Specs</p>
+                  <ul class="mt-1 space-y-1 text-neutral-200">
+                    <li>LangGraph multi-agent system</li>
+                    <li>Compliance Agent (policy-as-code)</li>
+                    <li>Bias Monitor (statistical parity)</li>
+                    <li>CI/CD compliance gate controls</li>
+                  </ul>
+                  <p class="mt-4 text-neutral-400">Compliance</p>
+                  <p>APRA CPS 234, ISO/IEC 42001</p>
+                </aside>
+                <div class="p-5 md:p-6">
+                  <h3 class="text-heading-3 text-neutral-50">Challenge</h3>
+                  <p class="mt-2 text-body text-neutral-300">
+                    Scaling AI adoption while staying aligned with APRA CPS 234 and current ASIC AI guidelines.
+                  </p>
+                  <h3 class="mt-5 text-heading-3 text-neutral-50">Solution</h3>
+                  <p class="mt-2 text-body text-neutral-300">
+                    Deployed agentic compliance monitoring in pipeline, blocking non compliant releases before
+                    production and providing a live governance signal to senior stakeholders.
+                  </p>
+                  <h3 class="mt-5 text-heading-3 text-neutral-50">Impact</h3>
+                  <p class="mt-2 text-body text-neutral-300">
+                    Automated 98% of policy check auditing workflows and delivered a real time risk posture to the Board.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel overflow-hidden p-0">
+              <div class="grid md:grid-cols-[280px_1fr]">
+                <aside class="border-b border-neutral-700 bg-neutral-950/80 p-5 font-mono text-caption text-neutral-300 md:border-b-0 md:border-r">
+                  <p class="text-brand-400">ENGAGEMENT 03</p>
+                  <p class="mt-2 text-caption-bold text-neutral-100">Adversarial AI Red Teaming</p>
+                  <p class="mt-4 text-neutral-400">Market</p>
+                  <p>Enterprise Retail and Ecommerce</p>
+                  <p class="mt-4 text-neutral-400">Tech Specs</p>
+                  <ul class="mt-1 space-y-1 text-neutral-200">
+                    <li>Garak + PyRIT test framework</li>
+                    <li>Recursive prompt injection tests</li>
+                    <li>Token smuggling simulations</li>
+                    <li>NeMo Guardrails remediation</li>
+                  </ul>
+                  <p class="mt-4 text-neutral-400">Compliance</p>
+                  <p>APPs, OWASP Top 10 for LLMs</p>
+                </aside>
+                <div class="p-5 md:p-6">
+                  <h3 class="text-heading-3 text-neutral-50">Challenge</h3>
+                  <p class="mt-2 text-body text-neutral-300">
+                    Customer facing GenAI assistants were vulnerable to jailbreak attempts and internal pricing leakage.
+                  </p>
+                  <h3 class="mt-5 text-heading-3 text-neutral-50">Solution</h3>
+                  <p class="mt-2 text-body text-neutral-300">
+                    Ran structured adversarial campaigns, validated exploit paths, and deployed hardened guardrails plus
+                    custom input sanitisation models for operational defence.
+                  </p>
+                  <h3 class="mt-5 text-heading-3 text-neutral-50">Impact</h3>
+                  <p class="mt-2 text-body text-neutral-300">
+                    Identified and remediated 4 critical bypasses before launch.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel overflow-hidden p-0">
+              <div class="grid md:grid-cols-[280px_1fr]">
+                <aside class="border-b border-neutral-700 bg-neutral-950/80 p-5 font-mono text-caption text-neutral-300 md:border-b-0 md:border-r">
+                  <p class="text-brand-400">ENGAGEMENT 04</p>
+                  <p class="mt-2 text-caption-bold text-neutral-100">Agentic Workforce Orchestration</p>
+                  <p class="mt-4 text-neutral-400">Market</p>
+                  <p>Legal Technology and Professional Services</p>
+                  <p class="mt-4 text-neutral-400">Tech Specs</p>
+                  <ul class="mt-1 space-y-1 text-neutral-200">
+                    <li>CrewAI and LangGraph orchestration</li>
+                    <li>Perplexity research agents</li>
+                    <li>Claude Sonnet 4 via Bedrock with tokenisation gateway</li>
+                    <li>Next.js HITL approval console</li>
+                  </ul>
+                  <p class="mt-4 text-neutral-400">Compliance</p>
+                  <p>Privacy preserving HITL controls + tokenisation before cloud inference</p>
+                </aside>
+                <div class="p-5 md:p-6">
+                  <h3 class="text-heading-3 text-neutral-50">Challenge</h3>
+                  <p class="mt-2 text-body text-neutral-300">
+                    High value staff were spending 40% of their time on lower level drafting and conflict checks.
+                  </p>
+                  <h3 class="mt-5 text-heading-3 text-neutral-50">Solution</h3>
+                  <p class="mt-2 text-body text-neutral-300">
+                    Built an agentic delegation model with explicit human review loop gates, ensuring output
+                    quality, traceability, and policy validation before release.
+                  </p>
+                  <h3 class="mt-5 text-heading-3 text-neutral-50">Impact</h3>
+                  <p class="mt-2 text-body text-neutral-300">
+                    3x increase in case throughput with 0% increase in administrative headcount.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel overflow-hidden p-0">
+              <div class="grid md:grid-cols-[280px_1fr]">
+                <aside class="border-b border-neutral-700 bg-neutral-950/80 p-5 font-mono text-caption text-neutral-300 md:border-b-0 md:border-r">
+                  <p class="text-brand-400">ENGAGEMENT 05</p>
+                  <p class="mt-2 text-caption-bold text-neutral-100">AI Strategy & Board Upskilling</p>
+                  <p class="mt-4 text-neutral-400">Market</p>
+                  <p>Mid market enterprise and statutory authorities</p>
+                  <p class="mt-4 text-neutral-400">Deliverables</p>
+                  <ul class="mt-1 space-y-1 text-neutral-200">
+                    <li>12 week governance playbook</li>
+                    <li>Executive prompt engineering labs</li>
+                    <li>Agentic ROI modelling templates</li>
+                    <li>24 month autonomy roadmap</li>
+                  </ul>
+                  <p class="mt-4 text-neutral-400">Compliance</p>
+                  <p>Unified enterprise security guardrails</p>
+                </aside>
+                <div class="p-5 md:p-6">
+                  <h3 class="text-heading-3 text-neutral-50">Challenge</h3>
+                  <p class="mt-2 text-body text-neutral-300">
+                    Low AI literacy at executive level was creating stalled innovation and unsafe shadow AI usage.
+                  </p>
+                  <h3 class="mt-5 text-heading-3 text-neutral-50">Solution</h3>
+                  <p class="mt-2 text-body text-neutral-300">
+                    Delivered a specialised upskilling program, quantified transition pathways from assisted AI to
+                    autonomous operations, and locked strategy to governance guardrails.
+                  </p>
+                  <h3 class="mt-5 text-heading-3 text-neutral-50">Impact</h3>
+                  <p class="mt-2 text-body text-neutral-300">
+                    Secured Board approval for a multimillion dollar AI transformation budget with unified controls.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="scroll-mt-24 py-16 pb-14 md:py-20 md:pb-16">
+        <div class="container flex flex-col items-center justify-center gap-5 p-5 text-center md:gap-6">
+          <div class="flex flex-col items-center">
+            <h2 class="mb-2 text-heading-2 text-neutral-50">Ready to secure your roadmap?</h2>
+          </div>
+          <div class="flex w-full justify-center md:w-auto">
+            <a
+              class="btn-primary w-full justify-center sm:w-auto"
+              href="https://calendar.app.google/qgWG2YkPXZhTvp8L7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Contact the Consultancy
+            </a>
+          </div>
+          <a class="text-body text-neutral-300 no-underline hover:underline" href="mailto:hello@mai.com.au">hello@mai.com.au</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-neutral-700 py-5">
+      <div class="container flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-center sm:gap-4">
+        <p class="text-body text-neutral-400">© <span id="year"></span> MAI. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a class="text-body text-neutral-400 no-underline" href="privacy.html">Privacy</a>
+          <a class="text-body text-neutral-400 no-underline" href="#top">Top</a>
+        </div>
+      </div>
+    </footer>
+
+    <section
+      id="socials-modal"
+      data-socials-modal
+      class="socials-panel"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="socials-title"
+      aria-hidden="true"
+    >
+      <div class="socials-shell">
+        <div class="mb-3 flex items-start justify-between gap-4">
+          <div>
+            <p class="font-mono text-caption text-neutral-400">SOCIAL LINK // ACTIVE</p>
+            <h2 id="socials-title" class="mt-2 text-heading-2 text-neutral-50">Stay Synchronised.</h2>
+          </div>
+          <div class="mt-1 flex items-center gap-3">
+            <span class="status-pill font-mono text-caption text-neutral-300">
+              <span class="status-dot" aria-hidden="true"></span>
+              Link active
+            </span>
+            <button
+              type="button"
+              data-socials-close
+              class="border border-neutral-700 px-2 py-1 font-mono text-caption text-neutral-300 hover:bg-neutral-800"
+              aria-label="Close socials"
+            >
+              X
+            </button>
+          </div>
+        </div>
+        <p class="mb-5 max-w-[46ch] text-body text-neutral-300">
+          Follow our latest engagements and technical deep-dives into the Australian AI landscape.
+        </p>
+        <div class="space-y-3">
+          <span class="social-link social-link-disabled" aria-disabled="true">
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="h-4 w-4">
+                <rect x="3" y="3" width="18" height="18"></rect>
+                <path d="M8 11v6"></path>
+                <path d="M8 8h.01"></path>
+                <path d="M12 17v-3.2c0-1.6 2-1.8 2 0V17"></path>
+                <path d="M12 11h2v1"></path>
+              </svg>
+            </span>
+            <span>LinkedIn: Governance (profile publishing soon)</span>
+          </span>
+          <div class="grid gap-3 sm:grid-cols-[1fr_1fr]">
+            <span class="social-link social-link-disabled sm:mr-6" aria-disabled="true">
+              <span class="social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="h-4 w-4">
+                  <path d="M12 3.5c-4.4 0-8 3.5-8 8 0 3.5 2.2 6.5 5.3 7.5v-2.7c-2.1.5-2.6-1-2.6-1-.4-1-.9-1.3-.9-1.3-.8-.5.1-.5.1-.5.9.1 1.4.9 1.4.9.8 1.4 2.2 1 2.7.8.1-.6.3-1 .6-1.3-1.7-.2-3.6-.9-3.6-4 0-.9.3-1.7.9-2.3-.1-.2-.4-1.1.1-2.2 0 0 .7-.2 2.4.9.7-.2 1.4-.3 2.1-.3.7 0 1.5.1 2.1.3 1.6-1.1 2.4-.9 2.4-.9.5 1.1.2 2 .1 2.2.6.6.9 1.4.9 2.3 0 3.1-1.9 3.8-3.7 4 .3.3.6.8.6 1.7v2.5c3.1-1 5.3-3.9 5.3-7.5 0-4.4-3.6-8-8-8Z"></path>
+                </svg>
+              </span>
+              <span>GitHub: Builds (profile publishing soon)</span>
+            </span>
+            <span class="social-link social-link-disabled sm:ml-2" aria-disabled="true">
+              <span class="social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="h-4 w-4">
+                  <path d="M4 4l16 16"></path>
+                  <path d="M20 4l-7 8"></path>
+                  <path d="M4 20l7-8"></path>
+                </svg>
+              </span>
+              <span>X: Updates (profile publishing soon)</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
