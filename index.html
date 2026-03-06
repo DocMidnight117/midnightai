@@ -40,16 +40,20 @@
         </a>
         <button
           data-menu-toggle
-          class="inline-flex border border-neutral-700 px-3 py-2 font-mono text-caption text-neutral-50 md:hidden"
+          class="hamburger-btn md:hidden"
           aria-expanded="false"
-          aria-controls="main-nav"
+          aria-controls="mobile-nav"
+          aria-label="Open navigation"
         >
+          <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true">
+            <rect width="16" height="1.5" rx="0.75" fill="currentColor"/>
+            <rect y="5.25" width="16" height="1.5" rx="0.75" fill="currentColor"/>
+            <rect y="10.5" width="16" height="1.5" rx="0.75" fill="currentColor"/>
+          </svg>
           Menu
         </button>
         <nav
-          id="main-nav"
-          data-main-nav
-          class="absolute right-4 top-[calc(100%+0.5rem)] hidden min-w-[220px] flex-col gap-2 border border-neutral-700 bg-neutral-900 p-3 md:static md:flex md:min-w-0 md:flex-row md:items-center md:gap-5 md:border-0 md:bg-transparent md:p-0"
+          class="hidden md:flex md:items-center md:gap-5"
           aria-label="Main navigation"
         >
           <a class="top-link" href="#services-intro">Services</a>
@@ -410,6 +414,46 @@
         </div>
       </div>
     </section>
+
+    <!-- Mobile nav overlay + drawer -->
+    <div data-nav-overlay class="nav-overlay" aria-hidden="true"></div>
+    <div
+      data-nav-drawer
+      id="mobile-nav"
+      class="nav-drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation"
+      aria-hidden="true"
+    >
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#6b7280">Navigation</span>
+        <button data-drawer-close class="drawer-close" aria-label="Close navigation">&#x2715;</button>
+      </div>
+      <nav aria-label="Mobile navigation links">
+        <a class="drawer-link" href="#services-intro">Services</a>
+        <a class="drawer-link" href="#build">Build</a>
+        <a class="drawer-link" href="#govern">Govern</a>
+        <a class="drawer-link" href="#secure">Secure</a>
+        <a class="drawer-link" href="#educate">Educate</a>
+        <a class="drawer-link" href="engagements.html">Engagements</a>
+        <a class="drawer-link" href="#local-edge">Local Edge</a>
+      </nav>
+      <div style="margin-top:auto;padding-top:1.5rem;display:flex;flex-direction:column;gap:.75rem">
+        <button
+          type="button"
+          data-socials-open
+          class="inline-flex items-center justify-center border border-neutral-700 px-3 py-2 font-mono text-caption text-neutral-100 hover:bg-neutral-800"
+          style="min-height:44px"
+          aria-haspopup="dialog"
+          aria-controls="socials-modal"
+          aria-expanded="false"
+        >
+          Socials
+        </button>
+        <a href="#contact" class="btn-primary px-3 py-2 text-caption-bold" style="min-height:44px;justify-content:center">Contact</a>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>

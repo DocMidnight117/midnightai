@@ -1,7 +1,5 @@
-const menuButton = document.querySelector('[data-menu-toggle]');
-const nav = document.querySelector('[data-main-nav]');
 const year = document.querySelector('#year');
-const socialsOpenButton = document.querySelector('[data-socials-open]');
+const socialsOpenButtons = document.querySelectorAll('[data-socials-open]');
 const socialsModal = document.querySelector('[data-socials-modal]');
 const socialsCloseButton = document.querySelector('[data-socials-close]');
 const topLinks = document.querySelectorAll('a[href="#top"]');
@@ -26,21 +24,46 @@ topLinks.forEach((link) => {
   });
 });
 
-if (menuButton && nav) {
-  menuButton.addEventListener('click', () => {
-    const isHidden = nav.classList.toggle('hidden');
-    menuButton.setAttribute('aria-expanded', String(!isHidden));
+const hamburgerBtn = document.querySelector('[data-menu-toggle]');
+const navOverlay = document.querySelector('[data-nav-overlay]');
+const navDrawer = document.querySelector('[data-nav-drawer]');
+const drawerCloseBtn = document.querySelector('[data-drawer-close]');
+
+if (hamburgerBtn && navOverlay && navDrawer && drawerCloseBtn) {
+  const openDrawer = () => {
+    navDrawer.classList.add('is-open');
+    navOverlay.classList.add('is-open');
+    hamburgerBtn.setAttribute('aria-expanded', 'true');
+    navDrawer.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    drawerCloseBtn.focus();
+  };
+
+  const closeDrawer = () => {
+    navDrawer.classList.remove('is-open');
+    navOverlay.classList.remove('is-open');
+    hamburgerBtn.setAttribute('aria-expanded', 'false');
+    navDrawer.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    hamburgerBtn.focus();
+  };
+
+  hamburgerBtn.addEventListener('click', openDrawer);
+  drawerCloseBtn.addEventListener('click', closeDrawer);
+  navOverlay.addEventListener('click', closeDrawer);
+
+  navDrawer.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeDrawer);
   });
 
-  nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      nav.classList.add('hidden');
-      menuButton.setAttribute('aria-expanded', 'false');
-    });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navDrawer.classList.contains('is-open')) {
+      closeDrawer();
+    }
   });
 }
 
-if (socialsOpenButton && socialsModal && socialsCloseButton) {
+if (socialsOpenButtons.length > 0 && socialsModal && socialsCloseButton) {
   let lastFocusedElement = null;
 
   const getFocusableElements = () =>
@@ -52,7 +75,7 @@ if (socialsOpenButton && socialsModal && socialsCloseButton) {
 
   const closeSocials = () => {
     socialsModal.classList.remove('is-open');
-    socialsOpenButton.setAttribute('aria-expanded', 'false');
+    socialsOpenButtons.forEach((b) => b.setAttribute('aria-expanded', 'false'));
     socialsModal.setAttribute('aria-hidden', 'true');
 
     if (lastFocusedElement instanceof HTMLElement) {
@@ -60,18 +83,29 @@ if (socialsOpenButton && socialsModal && socialsCloseButton) {
     }
   };
 
-  socialsOpenButton.addEventListener('click', () => {
-    const willOpen = !socialsModal.classList.contains('is-open');
-    if (!willOpen) {
-      closeSocials();
-      return;
-    }
+  socialsOpenButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      // If triggered from inside the mobile drawer, close the drawer first
+      if (navDrawer && navDrawer.contains(btn)) {
+        navDrawer.classList.remove('is-open');
+        navOverlay && navOverlay.classList.remove('is-open');
+        hamburgerBtn && hamburgerBtn.setAttribute('aria-expanded', 'false');
+        navDrawer.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
 
-    lastFocusedElement = document.activeElement;
-    socialsModal.classList.add('is-open');
-    socialsOpenButton.setAttribute('aria-expanded', 'true');
-    socialsModal.setAttribute('aria-hidden', 'false');
-    socialsCloseButton.focus();
+      const willOpen = !socialsModal.classList.contains('is-open');
+      if (!willOpen) {
+        closeSocials();
+        return;
+      }
+
+      lastFocusedElement = document.activeElement;
+      socialsModal.classList.add('is-open');
+      socialsOpenButtons.forEach((b) => b.setAttribute('aria-expanded', 'true'));
+      socialsModal.setAttribute('aria-hidden', 'false');
+      socialsCloseButton.focus();
+    });
   });
 
   socialsCloseButton.addEventListener('click', closeSocials);
@@ -83,7 +117,7 @@ if (socialsOpenButton && socialsModal && socialsCloseButton) {
     }
 
     const clickedInsideModal = socialsModal.contains(target);
-    const clickedOpenButton = socialsOpenButton.contains(target);
+    const clickedOpenButton = Array.from(socialsOpenButtons).some((b) => b.contains(target));
 
     if (!clickedInsideModal && !clickedOpenButton && socialsModal.classList.contains('is-open')) {
       closeSocials();
